@@ -5,6 +5,7 @@ var iFrameResizer = {
         // This can be used for communication from the hosting app to iframe app.
         try {
             let JSONMessage = JSON.parse(message); // Locale information should be present in `JSONPayload.locale`
+            JSONMessage.locale && (document.getElementById('localeTxt').innerHTML = `Locale is ${JSONMessage.locale}`)
         } catch (e) { // If error, means payload is not a serialized JSON. It is plain string
             if (message.includes('INTERACTION_')) { // capturing click, keyup and touchstart event from the host app
                 // Reset iframe session here if any
