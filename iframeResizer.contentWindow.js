@@ -911,7 +911,7 @@
 
   function getAllMeasurements(dimensions) {
     return [
-      dimensions.bodyOffset(),
+      dimensions.bodyOffset1(),
       dimensions.bodyScroll(),
       dimensions.documentElementOffset(),
       dimensions.documentElementScroll()
@@ -937,6 +937,10 @@
 
   var getHeight = {
       bodyOffset: function getBodyOffsetHeight() {
+        return Math.max.apply(null, getAllMeasurements(getHeight))
+      },
+
+      bodyOffset1: function getBodyOffsetHeight() {
         return (
           document.body.offsetHeight +
           getComputedStyle('marginTop') +
@@ -945,7 +949,7 @@
       },
 
       offset: function () {
-        return getHeight.bodyOffset() // Backwards compatability
+        return getHeight.bodyOffset1() // Backwards compatability
       },
 
       bodyScroll: function getBodyScrollHeight() {
@@ -978,7 +982,7 @@
 
       lowestElement: function getBestHeight() {
         return Math.max(
-          getHeight.bodyOffset() || getHeight.documentElementOffset(),
+          getHeight.bodyOffset1() || getHeight.documentElementOffset(),
           getMaxElement('bottom', getAllElements())
         )
       },
