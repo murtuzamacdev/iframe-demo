@@ -911,10 +911,10 @@
 
   function getAllMeasurements(dimensions) {
     return [
-      // dimensions.bodyOffset(),
-      // dimensions.bodyScroll(),
+      dimensions.bodyOffset(),
+      dimensions.bodyScroll(),
       dimensions.documentElementOffset(),
-      // dimensions.documentElementScroll()
+      dimensions.documentElementScroll()
     ]
   }
 
