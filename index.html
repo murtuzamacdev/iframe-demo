@@ -20,6 +20,7 @@
         .box {
             position: relative;
             margin: .8em;
+            margin-bottom: 3rem;
         }
 
         .box1 {
@@ -59,8 +60,12 @@
 </head>
 
 <body style="margin: 0">
-    <div style="height: 800px; width: 100%; background-color: green;">
-        <p style="color: white; font-weight: 'bold'" id="localeTxt"></p>
+  <div style=" width: 100%; background-color: green;">
+        <h3>This is an iFrame content.</h3>
+        <h4>Below is the Data received from the parent app</h4>
+        <div id="iframeContent">
+            {someData: {locale: 'en'}}
+        </div>
         <div class="box">
             <div class="box1">
                 <h2>Responsive Box 1</h2>
@@ -69,6 +74,39 @@
                 <h2>Responsive Box 2</h2>
             </div>
         </div>
+        <div class="box">
+            <div class="box1">
+                <h2>Responsive Box 1</h2>
+            </div>
+            <div class="box2">
+                <h2>Responsive Box 2</h2>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box1">
+                <h2>Responsive Box 1</h2>
+            </div>
+            <div class="box2">
+                <h2>Responsive Box 2</h2>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box1">
+                <h2>Responsive Box 1</h2>
+            </div>
+            <div class="box2">
+                <h2>Responsive Box 2</h2>
+            </div>
+        </div>
+        <div class="box">
+            <div class="box1">
+                <h2>Responsive Box 1</h2>
+            </div>
+            <div class="box2">
+                <h2>Responsive Box 2</h2>
+            </div>
+        </div>
+
         <button onclick="alert('button clicked')">Click me</button>
     </div>
 
